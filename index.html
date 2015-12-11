@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ajax Demo</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <ul class="nav pages nav-tabs">
+                <li role="presentation" id="tasks"><a href="#">Tasks</a></li>
+                <li role="presentation" id="messages"><a href="#">Messages</a></li>
+                <li role="presentation" id="absences"><a href="#">Absences</a></li>
+                <li role="presentation" id="account"><a href="#">Account (<span class="username"></span>)</a></li>
+            </ul>
+            <div class="login page">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="page-header">Log In</h1>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="username form-control" placeholder="Username"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="password form-control" placeholder="Password"/>
+                        </div>
+                        <button type="submit" class="login btn btn-primary">Log In</button>
+                        <i class="loading fa fa-spinner fa-spin"></i>
+                        <span class="error"> </span>
+                    </form>
+                </div>
+            </div>
+            <div class="tasks page">
+                <div>
+                    <h1 class="page-header">Tasks</h1>
+                </div>
+            </div>
+            <div class="messages page">
+                <div>
+                    <h1 class="page-header">Messages</h1>
+                </div>
+            </div>
+            <div class="absences page">
+                <div>
+                    <h1 class="page-header">Absences</h1>
+                </div>
+            </div>
+            <div class="account page">
+                <div>
+                    <h1 class="page-header">Account</h1>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="init.js"></script>
+        <script type="text/javascript" src="login.js"></script>
+        <script type="text/javascript" src="pages.js"></script>
+    </body>
+</html>
+

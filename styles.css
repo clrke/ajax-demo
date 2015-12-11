@@ -1,0 +1,20 @@
+body {
+    padding-top: 20px;
+}
+
+.page {
+    display: none;
+}
+
+.nav.pages {
+    display: none;
+}
+
+.loading {
+    display: none;
+}
+
+span.error {
+    color: red;
+}
+
