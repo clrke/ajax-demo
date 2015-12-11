@@ -25,15 +25,15 @@
 
             $('span.username').text(response.data.username);
 
+            username.val('');
+            password.val('');
+
             API_KEY = response.data.api_key;
         }).error(function(response) {
             error.text(response.responseJSON.data.message);
         }).always(function(response) {
             loading.hide();
         });
-        // todo: show error message if error
-        if(true) {
-        }
     });
 })();
 
