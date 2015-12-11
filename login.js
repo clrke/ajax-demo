@@ -8,6 +8,8 @@
 
     form.submit(function(e) {
         e.preventDefault();
+
+        error.text('');
         loading.show();
 
         var credentials = {
@@ -16,8 +18,6 @@
         };
 
         $.post(API_URL + '/login', credentials).success(function(response) {
-            error.text('');
-
             $('.page').hide();
             $('.nav.pages').show();
             $('.nav.pages #tasks').addClass('active');
