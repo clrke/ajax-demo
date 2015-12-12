@@ -28,7 +28,7 @@
             username.val('');
             password.val('');
 
-            API_KEY = response.data.api_key;
+            SET_API_KEY(response.data.api_key);
         }).error(function(response) {
             error.text(response.responseJSON.data.message);
         }).always(function(response) {
