@@ -8,6 +8,14 @@ var API_KEY,
         API_HEADERS = {
             'X-Authorization': API_KEY,
         };
+    },
+    API_CALL = function(type, url, data) {
+        return $.ajax({
+            url: API_URL + '/' + url,
+            type: type,
+            data: data,
+            headers: API_HEADERS
+        });
     };
 
 (function() {

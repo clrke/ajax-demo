@@ -29,13 +29,8 @@
             password_confirmation: passwordConfirmation.val()
         };
 
-        $.ajax({
-            url: API_URL + '/change-password',
-            type: 'post',
-            data: data,
-            headers: API_HEADERS
-        }).success(function(response) {
-
+        API_CALL('post', 'change-password', data)
+        .success(function(response) {
             success.text(response.data.message);
 
             oldPassword.val('');
