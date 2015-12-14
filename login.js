@@ -28,7 +28,7 @@
             username.val('');
             password.val('');
 
-            SET_API_KEY(response.data.api_key);
+            USER_LOGIN(response.data.api_key);
         }).error(function(response) {
             error.text(response.responseJSON.data.message);
         }).always(function(response) {

@@ -3,6 +3,14 @@ var API_KEY,
     DOMAIN_URL = "https://vast-crag-4022.herokuapp.com",
     API_VERSION = "v1",
     API_URL = DOMAIN_URL+"/api/"+API_VERSION,
+    PAGES_INITIALIZERS = [],
+    USER_LOGIN = function(key) {
+        SET_API_KEY(key);
+
+        PAGES_INITIALIZERS.forEach(function(initialize) {
+            initialize();
+        });
+    },
     SET_API_KEY = function(key) {
         API_KEY = key;
         API_HEADERS = {
